@@ -122,13 +122,20 @@ function estaEnRango(numero) {
 }
 
 function esEntero(numero) {
-  // Devuelve "true" si "numero" es un entero (int/integer)aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  // Devuelve "true" si "numero" es un entero (int/integer)
   // Ejemplo: 0.8 -> false
   // Ejemplo: 1 -> true
   // Ejemplo: -10 -> true
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+  if (Math.floor(numero) === numero) {
+    return true;
+
+  }
+  else {
+    return false;
+  }
 }
 
 
@@ -180,11 +187,26 @@ else {
 
 
 function esPrimo(numero) {
-  // Devuelve "true" si "numero" es primoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  // Devuelve "true" si "numero" es primo
   // De lo contrario devuelve "falso"
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+  
+  if (numero === 0 || numero === 1) {
+    return false;
+  }
+  else {
+    var bandera = true;
+    for (var i = 2; i < numero; i++) {
+      if (numero % i === 0) {
+        bandera = false
+        break;
+      }
+    }
+    return bandera;
+  }
+
 }
 
 
@@ -203,19 +225,40 @@ if (valor === false) {
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí   
+  //Escribe tu código aquí  
+  var array = [];
   
+  for (var i = 0; i <= 10; i++) {
+    array[i] = i * 6;      
+  }
+return array;
+
 }
+
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
+  numero = numero + '';
+  if (numero.length === 3){
+return true;
+  }
+else {
+  return false;
+}
 }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var repeticiones = 1;
+  do {
+      numero = numero + 5;
+      repeticiones = repeticiones + 1;
+     } while (repeticiones <=8);
+     return numero;
+
 }
 
 
