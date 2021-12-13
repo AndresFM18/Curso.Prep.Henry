@@ -130,7 +130,7 @@ function numeroMasGrande(numeros) {
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
 }
 
@@ -200,7 +200,20 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+ i = 0;
+ n = 0;
+ array = [];
+  while (i < 11) {
+    i = i + 1
+    if (i === 5){continue;}
+     numero = numero + 2;
+     numero = array[n];
+     n = n + 1;
+    
+  }
+  return array;
 }
+
 
 
 // No modificar nada debajo de esta línea
