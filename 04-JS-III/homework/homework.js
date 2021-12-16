@@ -126,6 +126,15 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var elmayor = numeros[0]
+  for(var i=0;i<numeros.length;i++){
+      if (elmayor < numeros[i]){
+        elmayor = numeros[i];
+      }
+
+    }
+  
+return elmayor;
 }
 
 function multiplicarArgumentos() {
